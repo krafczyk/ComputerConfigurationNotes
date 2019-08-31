@@ -5,3 +5,5 @@ Recently, the hid_steam kernel module landed in the kernel, and I took this trou
 I blacklisted hid steam with the file /etc/modprobe.d/steam_hid_blacklist.conf contained in this repository.
 
 At the same time, it seems I tried external solutions like the sc-controller package, but didn't get any results. At the time, I was trying to get "Ori and the Blind Forest" to work, but ran into lots of problems. It turns out that this game has a general bug that it refuses to recognize steam controllers.
+
+I also tried the file 99-steam-controller-perms.rules in /lib/udev/rules.d/ as suggested by the website https://www.gamingonlinux.com/articles/you-will-need-to-update-your-udev-rules-for-the-steam-controller.8593
