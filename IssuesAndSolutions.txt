@@ -1,0 +1,5 @@
+In the past, I had problems getting the steam controller to work properly.
+
+Recently, the hid_steam kernel module landed in the kernel, and I took this trouble to be the fault of hid_steam.
+
+I blacklisted hid steam with the file /etc/modprobe.d/steam_hid_blacklist.conf contained in this repository.
