@@ -14,3 +14,10 @@ August 30 2019 - I am again having trouble, this time with multiple controllers 
 I will start by removing all custom configuration I added before, and hope that now the 'default' configuration works fine.
 
 current kernel: Linux schumann 5.2.9-arch1-1-ARCH #1 SMP PREEMPT Fri Aug 16 11:29:43 UTC 2019 x86_64 GNU/Linux
+
+This seems to have worked.. Strangely, 'input' reports the new device as a 'Microsoft X-Box 360' pad. Its possible this is normal though. Here is the relevant bit from dmesg -wH:
+
+[Aug30 20:44] hid-steam 0003:28DE:1142.0009: Steam Controller 'FC64520AD8' connected
+[  +0.249657] input: Microsoft X-Box 360 pad as /devices/virtual/input/input24
+
+Weird.
