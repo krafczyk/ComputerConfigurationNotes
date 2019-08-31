@@ -7,3 +7,10 @@ I blacklisted hid steam with the file /etc/modprobe.d/steam_hid_blacklist.conf c
 At the same time, it seems I tried external solutions like the sc-controller package, but didn't get any results. At the time, I was trying to get "Ori and the Blind Forest" to work, but ran into lots of problems. It turns out that this game has a general bug that it refuses to recognize steam controllers.
 
 I also tried the file 99-steam-controller-perms.rules in /lib/udev/rules.d/ as suggested by the website https://www.gamingonlinux.com/articles/you-will-need-to-update-your-udev-rules-for-the-steam-controller.8593
+
+
+August 30 2019 - I am again having trouble, this time with multiple controllers popping up in Steam when I attach a steam controller. I assume some steam behaviour changed, so I again must explore the different options to solve these issues and see which work. this will require me to restart my computer a bunch of times. fun.
+
+I will start by removing all custom configuration I added before, and hope that now the 'default' configuration works fine.
+
+current kernel: Linux schumann 5.2.9-arch1-1-ARCH #1 SMP PREEMPT Fri Aug 16 11:29:43 UTC 2019 x86_64 GNU/Linux
