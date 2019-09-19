@@ -21,3 +21,5 @@ This seems to have worked.. Strangely, 'input' reports the new device as a 'Micr
 [  +0.249657] input: Microsoft X-Box 360 pad as /devices/virtual/input/input24
 
 Weird.
+
+[Sep 18 2019] After changing my motherboard from MSI X99S SLI PLUS to an MSI X99A Godlike gaming, I ran into a number of problems, chief of which is the steam controller stopped working again! I quickly found however, that the uinput kernel module wasn't loaded! This prevents the Microsoft X-Box 360 pad from being loaded. I'm adding a file /etc/modules-load.d/uinput.conf with the one line 'uinput'
