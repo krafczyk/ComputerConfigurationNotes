@@ -1,0 +1,11 @@
+--- The original problem ---
+
+When I tried to plug in my headphones to the front jack on the computer, pulse would automatically switch to using the HDMI sound output from my Nvidia GPU to one of my monitors with sound output. It would also make it impossible to select the headphone output, it would always select itself.
+
+I made a post about it here: https://bbs.archlinux.org/viewtopic.php?id=249249
+
+With my new motherboard, it seems acpi events aren't properly being generated from the headphone jack. I could investigate further about whether I've got the connector plugged in right, but I found a pretty reasonable way out after following the acpi links one of the users on the arch forums sent me.
+
+I used hdajackretask program in the alsa-tools package. This allows you to re-assign a jack to a different task. It seems that with a test using acpi_listen, acpi events were correctly being generated for the mic jack, so I retasked this jack as a headphone jack. I launched the hdajackretask program, Selected Override on 'Pink Mic, Front side' 'Pin ID: 0x19' and selected 'Headphone'. Click 'Install boot override' then restarted my computer.
+
+This is an appropriate solution for this issue. I can now plug and unplug the headphones from the mic jack and things work as expected.
